@@ -1,26 +1,35 @@
+
 from BankAccount import BankAccount
 from CurrentAccount import CurrentAccount
 from SavingAccount import SavingAccount
 
+Bank = BankAccount(1112, 500)
+Bank.DisplayBalance()
+Bank.withdraw(100)
+Bank.DisplayBalance()
+Bank.deposit(700)
+Bank.DisplayBalance()
 
-account1 = BankAccount(123456789, 1000)
-account1.deposit(500)
-account1.show_balance()
-account1.withdraw(100)
-account1.show_balance()
+print("========================================")
 
+Save = SavingAccount(1111,1000)
+Save.DisplayBalance()
+Save.savingdeposit(3000)
+Save.DisplayBalance()
+Save.withdraw(4000)
+Save.DisplayBalance()
 
-account2 = SavingAccount(987654321, 1000)
-account2.deposit(500)
-account2.show_balance()
-account2.apply_interest(100)
-account2.show_balance()
+print("========================================")
 
+Cur = CurrentAccount(1113,100000)
+Cur.DisplayBalance()
+Cur.currentwithdrwal(99800)
+Cur.DisplayBalance()
 
-account3 = CurrentAccount(12345678,1000)
-account3.deposit(500)
-account3.show_balance()
-account3.curwithdraw(100)
-account3.show_balance()
+print("========================================")
 
-
+T1 =BankAccount(1114,3000)
+T1.DisplayBalance()
+T1.Transfer(500, Bank)
+T1.DisplayBalance()
+Bank.DisplayBalance()
