@@ -2,11 +2,11 @@ from BankAccount import BankAccount
 
 
 class CurrentAccount(BankAccount):
-    def __init__(self, account_number, balance):
-        super().__init__(account_number, balance)
+    def __init__(self,num,IniAmount):
+        super().__init__(num,IniAmount)
+        print(f"congrats... your current account has been created{self._AccNo} ")
 
-
-    def  curwithdraw(self, amount):
-        amount+=200
-        print("200 charge is taken for each transaction")
+    def currentwithdrwal(self,amount):
+        amount +=200
+        print("charge 100 is applicable for every withdraw")
         self.withdraw(amount)
