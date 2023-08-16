@@ -2,13 +2,14 @@ from BankAccount import BankAccount
 
 
 class SavingAccount(BankAccount):
-    def __init__(self, account_number, balance):
-        super().__init__(account_number, balance)
 
 
+    def __init__(self,num,IniAmount):
+        super().__init__(num,IniAmount)
+        print(f"congrats..your saving account has been is created {self._AccNo}")
 
-    def apply_interest(self,amount):
-        interest_rate=amount*3/100
-        amount+=interest_rate
-        print(str(self.account_number)+" the interest given is " +str(interest_rate)+"%")
+    def savingdeposit(self, amount):
+        intrest = amount * 3/100
+        amount += intrest
+        print(f"{intrest} intrest is added in your account ")
         self.deposit(amount)
